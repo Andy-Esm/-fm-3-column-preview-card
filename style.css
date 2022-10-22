@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+	/*colors primary*/
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+	
+	/*Neutral*/
+	--trans-white: hsla(0, 0%, 100%, 0.75);
+	--light-gray:  hsl(0, 0%, 95%);
+	
+	/*typography*/
+	--fs: 1.5rem;
+	--ff-main: 'Lexend Deca', sans-serif;
+	--ff-head: 'Big Shoulders Display', cursive;
+	--weight-norm: 400;
+	--weight-bold: 700;
+}
+
+*, *::after, *::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.2%;
+}
+
+body{
+	font-family: var(--ff-main);
+	font-weight: var(--weight-norm);
+	font-size: var(--fs);
+	overflow-x: hidden; 
+	min-height: 100vh;
+
+	
+}
+
+img{
+	display: inline-block;
+	max-width: 100%;
+	height: auto; 
+	vertical-align: middle;
+}
+a {
+	text-decoration: none;
+}
+
+
+.container{
+	margin: 0 auto;
+	padding: 0 1.5rem;
+	width: 100%;
+	min-height: 100vh;
+	max-width: 144rem;
+	display: grid;
+	place-items: center;
+	
+}
+.wrapper{
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 96rem;
+	width: 100%;
+	
+}
+
+@media (max-width: 640px) {
+	.container{
+		max-width: 43rem;
+		padding: 0 1rem;
+	}
+	.wrapper{
+		flex-direction: column;
+	}
+	.card{
+		min-width: 100%;
+		border-radius: .5rem;
+	}
+}
+.card{
+	display: flex;
+	min-height: 40rem;
+	max-width: 33%;
+  flex-direction: column;
+	padding: 4rem;
+}
+.card--orange{
+	background-color: var(--bright-orange);
+}
+.card--blue{
+	background-color: var(--dark-cyan);
+}
+.card--green{
+	background-color: var(--very-dark-cyan);
+}
+.card__icon{
+	margin: 0 0 2rem;
+	object-fit: contain;
+	width: 6rem;
+	height: 6rem;
+}
+.card__item{
+	display: flex;
+	flex-direction: column;
+	min-height: inherit;
+	
+}
+.card__title{
+	font-size: 3.6rem;
+	color: var(--light-gray);
+	margin-bottom: 2rem;
+	font-weight: var(--weight-bold);
+	font-family: var(--ff-head);
+	text-transform: uppercase;
+}
+.card__text{
+	color: var(--trans-white);
+	margin-bottom: 12rem;
+	padding: 0 3rem 0 0;
+	line-height: 1.5;
+}
+.card__btn{
+	align-self: baseline;
+	background-color: white;
+	padding: 1rem 2.4rem;
+	border: .1rem solid white;
+	border-radius: 2.5rem;
+
+	transition: background-color 0.3s ease-in, color 0.3s ease-in-out;
+}
+.card__btn:hover{
+	background-color: transparent;
+	color: white;
+}
