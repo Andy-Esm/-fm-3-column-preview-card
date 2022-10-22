@@ -36,6 +36,7 @@ body {
 	font-size: var(--fs);
 	overflow-x: hidden;
 	min-height: 100vh;
+	background-color: var(--light-gray);
 }
 
 img {
